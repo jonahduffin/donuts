@@ -83,6 +83,7 @@ header a {
   text-transform: uppercase;
   color: var(--clr-bg);
   font-weight: 700;
+  text-align: center;
 }
 
 .fresh {
@@ -95,6 +96,7 @@ header a {
 .hook h2 {
   font-size: 1rem;
   color: var(--clr-bg);
+  text-align: center;
 }
 
 .neon-btn {
@@ -226,4 +228,55 @@ header a {
 .btn-cart:hover {
   border-color: #ff7b39;
   color: #ff7b39;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: col;
+}
+
+@media (min-width: 900px) {
+  .short-text {
+    display: none;
+  }
+  .format-text {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .short-text {
+    display: inline-block;
+  }
+  .full-text {
+    display: none;
+  }
+  .original-text {
+    display: none;
+  }
+  .format-text {
+    display: inline-block;
+  }
+
+  .neon-btn + .neon-btn {
+    margin-left: 1.5em;
+  }
+}
+
+@media (max-width: 700px) {
+  .short-text {
+    display: none;
+  }
+  .full-text {
+    display: none;
+  }
+
+  .neon-btn {
+    margin: 0;
+  }
+
+  .btn-buy,
+  .btn-cart {
+    height: 2.7rem;
+  }
 }

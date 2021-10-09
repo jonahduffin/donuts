@@ -14,31 +14,48 @@
 <header>
   <img src="{% static '/img/Paradise-Donuts-Transparent.png'%}" alt="Donut Logo" class="logo">
   <div class="neon-buttons">
-    <a href="" class="neon-btn"><i class="fas fa-car"></i> ORDER DELIVERY</a>
-    <a href="" class="neon-btn"><i class="fas fa-store"></i> ORDER PICKUP</a>
+    <a href="" class="neon-btn">
+      <i class="fas fa-car icons"></i>
+      <span class="full-text">ORDER DELIVERY</span>
+      <span class="short-text">DELIVERY</span>
+    </a>
+    <a href="" class="neon-btn">
+      <i class="fas fa-store icons"></i>
+      <span class="full-text">ORDER PICKUP</span>
+      <span class="short-text">PICKUP</span>
+    </a>
   </div>
-  <a href="#" class="find-loc"><i class="fas fa-map-marked-alt"></i> Find a location</a>
+  <a href="#" class="find-loc">
+    <i class="fas fa-map-marked-alt"></i>        
+    <span class="full-text">Find a location</span>
+    <span class="short-text">Stores</span>
+  </a>
 </header>
 <div class="container">
   <div class="hook">
-    <h1>The World's&emsp;<span class="fresh">Freshest</span>&emsp;doughnuts</h1>
+    <h1 class="original-text">The World's<span class="fresh">&nbsp;Freshest&nbsp;</span>doughnuts</h1>
+    <h1 class="format-text">The World's<br><span class="fresh">&nbsp;Freshest&nbsp;</span><br>doughnuts</h1>
     <h2>Recently recognized as Utah's best doughnut shop by Kettles Magazine</h2>
   </div>
   <div class="col" >
       <div class="row">
         {% for donut in donuts %}
-        <div class="col col-3 d-flex align-items-stretch">
+        <div class="col col-sm-3 d-flex align-items-stretch">
           <div class="card border-0 text-center mb-4">
             <img src="{{donut.imageurl}}" class="card-img-top" alt="...">
             <div class="card-body">
               <p class="card-text">{{donut.name}}</p>
             </div>
             <div class="product-btns">
-              <button type="button" class="btn-cart">add to cart 
-                <span><i class="fas fa-plus"></i></span>
+              <button type="button" class="btn-cart">
+                <span class="full-text">Add to cart</span>
+                <span class="short-text">Cart</span>
+                <i class="fas fa-plus"></i>
               </button>
-              <button type="button" class="btn-buy">buy now
-                <span><i class="fas fa-shopping-cart"></i></span>
+              <button type="button" class="btn-buy">
+                <span class="full-text">Buy Now</span>
+                <span class="short-text"></span>
+                <i class="fas fa-shopping-cart"></i>
               </button>
             </div>
           </div>
