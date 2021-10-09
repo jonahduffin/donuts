@@ -3,3 +3,8 @@ os: linux
 files:
   - source: /
     destination: /home/ubuntu/django/donuts
+hooks:
+  BeforeInstall: 
+    - location: scripts/before_install
+      timeout: 300
+      runas: root
