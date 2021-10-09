@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'donuts',
         'USER': 'admin',
         'PASSWORD': 'password',
-        'HOST': 'donuts-db.cymyp25a2lne.us-east-2.rds.amazonaws.com',
+        'HOST': 'donutrdsidentifier.cymyp25a2lne.us-east-2.rds.amazonaws.com',
         'PORT': '3306',
     }
 }
