@@ -235,7 +235,7 @@ header a {
   flex-direction: col;
 }
 
-@media (min-width: 900px) {
+@media screen and (min-width: 900px) {
   .short-text {
     display: none;
   }
@@ -244,7 +244,7 @@ header a {
   }
 }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
   .short-text {
     display: inline-block;
   }
@@ -263,7 +263,7 @@ header a {
   }
 }
 
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .short-text {
     display: none;
   }
