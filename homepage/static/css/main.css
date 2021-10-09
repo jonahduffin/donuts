@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Birthstone&family=Great+Vibes&family=Italianno&family=Pacifico&family=Poppins:wght@500;700&family=Raleway:wght@300;500;700&family=Roboto:wght@300;400;700&display=swap");
+
+:root {
+  --clr-neon: #ff911a;
+  --clr-bg: #21006f;
+  --clr-blue: #298cd6;
+  --clr-spcgray: #25282a;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+/* Navigation Bar */
+
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5em 5%;
+  margin-bottom: 1em;
+
+  background: var(--clr-bg);
+
+  z-index: 1000;
+  position: relative;
+}
+
+.logo {
+  width: 10em;
+  cursor: pointer;
+  margin-right: 2em;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  padding: 0 20px;
+  margin-top: 1em;
+}
+
+nav a {
+  transition: all 0.3 ease 0s;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+nav a:hover {
+  color: #0088a9;
+  text-decoration: none;
+}
+
+header a {
+  margin-left: auto;
+}
+
+/*Words*/
+.hook {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.hook h1 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: var(--clr-bg);
+  font-weight: 700;
+}
+
+.fresh {
+  font-size: 6rem;
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+
+.hook h2 {
+  font-size: 1rem;
+  color: var(--clr-bg);
+}
+
+.neon-btn {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--clr-neon);
+  border: var(--clr-neon) 0.125em solid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+
+  box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+
+  position: relative;
+}
+
+.neon-btn + .neon-btn {
+  margin-left: 2.5em;
+}
+
+.neon-btn::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  background: var(--clr-neon);
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  transform: perspective(2em) rotateX(40deg) scale(1, 0.35);
+  filter: blur(1em);
+  opacity: 0.7;
+}
+
+.neon-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 2em 0.5em var(--clr-neon);
+  opacity: 0;
+  background-color: var(--clr-neon);
+  z-index: -1;
+  transition: opacity 100ms linear;
+}
+
+.neon-btn:hover,
+.neon-btn:focus {
+  color: var(--clr-bg);
+  text-shadow: none;
+  text-decoration: none;
+}
+
+.neon-btn:hover::before,
+.neon-btn:focus::before {
+  opacity: 1;
+}
+.neon-btn:hover::after,
+.neon-btn:focus::after {
+  opacity: 1;
+}
+
+.find-loc {
+  color: var(--clr-neon);
+  text-decoration: none;
+}
+
+.find-loc:hover {
+  color: #ff7b39;
+  text-decoration: none;
+}
+
+/* BUTTONS */
+.product-btns {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.4rem;
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+
+.btn-buy {
+  font-size: 0.75rem;
+  margin-left: 0.5em;
+  padding: 0.7rem 0.5rem;
+  height: 2.5rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  display: block;
+  border: 0;
+  border-radius: 2px;
+  background: var(--clr-neon);
+  color: var(--clr-spcgray);
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.btn-buy:hover {
+  filter: brightness(0.95);
+}
+
+.btn-cart {
+  font-size: 0.75rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  margin-right: 0.5em;
+  text-transform: uppercase;
+  padding: 0.7rem 0.5rem;
+  height: 2.5rem;
+  display: block;
+  border: 2px solid var(--clr-bg);
+  border-radius: 2px;
+  font-weight: 500;
+  background: none;
+  color: var(--clr-bg);
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.btn-cart:hover {
+  border-color: #ff7b39;
+  color: #ff7b39;
+}
