@@ -230,12 +230,7 @@ header a {
   color: #ff7b39;
 }
 
-.flex-col {
-  display: flex;
-  flex-direction: col;
-}
-
-@media screen and (min-width: 900px) {
+/* @media screen and (min-width: 900px) {
   .short-text {
     display: none !important;
   }
@@ -279,4 +274,4 @@ header a {
   .btn-cart {
     height: 2.7rem !important;
   }
-}
+} */
